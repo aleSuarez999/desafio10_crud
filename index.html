@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar__container ">
+        <div class="container d-flex ">
+            <a href="./index.html"><h1 >Peliculas</h1></a>
+        </div>
+    </header>
+    <div class="d-flex">
+        <main class="container">
+            
+            <div class="grid">
+                <div class="col-xl-3 col-lg-3 col-xs-12">
+                    <h2>Busqueda</h2>
+                    <form id="busqueda" class="form__container" onsubmit="findMovies(event)">
+                        <div class="form__input-group">
+                            <label class="form__label" for="fTitulo" required>Titulo</label>
+                            <input class="form__input" type="text" name="fTitulo" id="fTitulo">
+                            <span id="fTitulo-error" class="form__error"></span>
+                        </div>
+                        <div class="form__input-group">
+                            <label class="form__label" for="fFechaLanzamiento" required>Fecha Lanzamiento</label>
+                            <input class="form__input" type="number" name="fFechaLanzamiento" id="fFechaLanzamiento">
+                            <span id="fFechaLanzamiento-error" class="form__error"></span>
+                        </div>
+                        <button type="submit" class="form__submit btn btn__secondary"><i class="fa fa-search" aria-hidden="true"></i>BUSCAR</button>
+                    </form>
+                </div>
+                <div id="card_container" class="col-xl-6 col-lg-6 col-xs-12">
+                        <h2>Lista de Peliculas <span id="seriesCount"></span></h2>
+                    <div id="series_container">
+                    
+                    </div>
+
+
+                </div> 
+
+                <div class="col-xl-3 col-lg-3 col-xs-12">
+                    
+                    <form class="form__container" onsubmit="uploadSubmit(event)" onreset="Reset(event)">
+                        <h2 id="crud_title">Alta</h2>
+                        <div class="form__input-group">
+                            <label class="form__label" for="title" required>Titulo</label>
+                            <input class="form__input" type="text" name="title" id="title">
+                            <span id="title-error" class="form__error"></span>
+                        </div>
+                        <div class="form__input-group">
+                            <label class="form__label" for="description" required>Descripcion</label>
+                            <input class="form__input" type="text" name="description" id="description">
+                            <span id="description-error" class="form__error"></span>
+                        </div>
+                        <div class="form__input-group">
+                            <label class="form__label" for="year" required>Fecha Lanzamiento</label>
+                            <input class="form__input" type="text" name="year" id="year">
+                            <span id="year-error" class="form__error"></span>
+                        </div>
+                        <div class="form__input-group">
+                            <label class="form__label" for="image" required>Imagen</label>
+                            <input class="form__input" type="text" name="image" id="image">
+                            <span id="image-error" class="form__error"></span>
+                        </div>
+                        <button type="submit" class="form__submit btn btn__primary"><i class="fa-solid fa-paper-plane"></i>SAVE</button>
+                        <button type="reset" class="form__submit btn btn__secondary"><i class="fa-solid fa-adn"></i>RESET</button>
+                    </form>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <footer class="footer__container">
+        <div class="footer__wrapp container">
+            <h4>Peliculas</h4>
+            <span>Copyright 2025 ©</span>
+            <div class="d-flex">
+                <a class="footer__socialmedia-links" href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a class="footer__socialmedia-links" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a class="footer__socialmedia-links" href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/delete.js"></script>
+    <script src="./js/edit.js"></script>
+    <script src="./js/readData.js"></script>
+    <script src="./js/upload.js"></script>
+    <script src="./js/filter.js"></script>
+</body>
+</html>
