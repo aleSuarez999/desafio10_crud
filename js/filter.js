@@ -93,29 +93,3 @@ const Reset = (event) => { // PARA PODER HACER CANCELAR EDICION Y HACER UN ALTA
     location.hash = ""
     document.getElementById("crud_title").innerHTML = "Alta"
 }
-
-/* // no se usa
-window.addEventListener("popstate", ()=>{
-    // esta busqueda viene del historial
-    // si me cambia el url es una busqueda
-
-    /*
-    alert("no deberia pasar por aca")
-    console.log(location.pathname)
-    let parametros = location.search // me traigo lo que le sigue a la barra
-    console.log(window.location)
-    console.log("PARAMETROS", parametros)
-    const params = new URLSearchParams(parametros); // transformo a objeto de busqueda
-    const fTitulo = params.get("titulo");
-    const fFechaLanzamiento = parseInt(params.get("year"));
-    console.log("BUSCA TITULO: ", fTitulo)
-    console.log("BUSCA año: ", fFechaLanzamiento)
-    // si hay algun valor en el titulo lo completo en los campos de busqueda porque en aplicar filtro valido la busqueda
-    document.getElementById("fTitulo").value = (fTitulo) ? fTitulo : ""
-    document.getElementById("fFechaLanzamiento").value = (fFechaLanzamiento) ? fFechaLanzamiento : ""
-        
-    //const q = parseInt(params.get("q"), 10);
-    aplicarFiltro(fFechaLanzamiento, fTitulo)
-
-})
-*/
